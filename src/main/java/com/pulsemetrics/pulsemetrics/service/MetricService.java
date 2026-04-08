@@ -69,13 +69,15 @@ public class MetricService {
         metricRepository.delete(metric);
     }
 
-    private MetricResponse toResponse(Metric metric) {
-        return MetricResponse.builder()
-                .id(metric.getId())
-                .name(metric.getName())
-                .description(metric.getDescription())
-                .unit(metric.getUnit())
-                .createdAt(metric.getCreatedAt())
-                .build();
-    }
+ private MetricResponse toResponse(Metric metric) {
+    return MetricResponse.builder()
+            .id(metric.getId())
+            .name(metric.getName())
+            .description(metric.getDescription())
+            .unit(metric.getUnit())
+            .goalValue(metric.getGoalValue())
+            .goalDirection(metric.getGoalDirection())
+            .createdAt(metric.getCreatedAt())
+            .build();
+}
 }

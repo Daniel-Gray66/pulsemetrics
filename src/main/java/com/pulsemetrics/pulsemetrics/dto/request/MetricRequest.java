@@ -1,5 +1,7 @@
 package com.pulsemetrics.pulsemetrics.dto.request;
 
+import com.pulsemetrics.pulsemetrics.model.GoalDirection;
+
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
@@ -13,4 +15,8 @@ public class MetricRequest {
 
     @NotBlank(message = "Unit is required")
     private String unit;
+
+    private Double goalValue;
+    private GoalDirection goalDirection;
+    
 }

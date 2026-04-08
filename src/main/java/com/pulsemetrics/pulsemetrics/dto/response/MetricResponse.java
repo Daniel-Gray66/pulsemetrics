@@ -12,4 +12,6 @@ public class MetricResponse {
     private String description;
     private String unit;
     private LocalDateTime createdAt;
+    private Double goalValue;
+    
 }
